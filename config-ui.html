@@ -1,0 +1,144 @@
+﻿<div class="theta-carousel-settinghs" title="Carousel Settings">
+</div>
+<div class="theta-carousel-settinghs-script" title="jQuery Script" style="overflow: hidden;">
+    <textarea style="width: 100%; height: 100%; resize: none;"></textarea>
+</div>
+
+<script id="theta-carousel-options-partial-template" type="text/x-handlebars-template">
+    {{#each settings}}
+    <div class="cc-stting-container" data-visibility-depends-on-property="{{visibilityDependsOnProperty}}" data-show-for-values="{{showForValues}}" data-property="{{property}}" data-refresh-event="{{refreshOnEvent}}" data-default="{{defaultVal}}" data-type="{{type}}">
+        {{#ifCond type "slider"}}
+        <div class="cc-title" style="min-width: {{../../titleMinWidth}}" data-template="{{title}} ({0})">{{title}}</div>
+        <div class="cc-slider-container">
+            <div class="cc-slider" data-min="{{min}}" data-step="{{step}}" data-max="{{max}}"></div>
+        </div>
+        <div class="cc-button-container">
+            <button class="cc-reset" style="outline: none;">Reset</button>
+        </div>
+        {{/ifCond}}
+        {{#ifCond type "combobox"}}
+        <div class="cc-title" style="min-width: {{../../titleMinWidth}}">{{title}}</div>
+        <div class="cc-select-container">
+            <select class="cc-select" data-custom-handler="{{customHandler}}">
+                {{#options}}
+                <option value="{{value}}">{{name}}</option>
+                {{/options}}
+            </select>
+        </div>
+        <div class="cc-button-container">
+            <button class="cc-reset" style="outline: none;">Reset</button>
+        </div>
+        {{/ifCond}}
+        {{#ifCond type "checkbox"}}
+        <div class="cc-title" style="min-width: {{../../titleMinWidth}}"></div>
+        <div class="cc-checkbox-container">
+            <input type="checkbox" id="{{property}}" data-default="{{defaultVal}}"><label for="{{property}}">{{title}}</label>
+        </div>
+        <div class="cc-button-container">
+            <button class="cc-reset" style="outline: none;">Reset</button>
+        </div>
+        {{/ifCond}}
+        {{#ifCond type "bezier"}}
+        <div class="cc-title" style="min-width: {{../../titleMinWidth}}">{{title}}</div>
+        <div class="cc-editor-container cc-bezier" style="height: {{height}};width: {{width}}" data-range-validator="{{rangeFunctionName}}" data-default=" {{defaultval}}" data-y-axis-title="{{yAxisTitle}}" data-x-axis-title="{{xAxisTitle}}" data-zero-x="{{zeroPositionX}}" data-zero-y="{{zeroPositionY}}">
+
+        </div>
+        <div class="cc-button-container">
+            <button class="cc-reset" style="outline: none;">Reset</button>
+        </div>
+        {{/ifCond}}
+        {{#ifCond type "custom"}}
+        {{#putHere selector}}
+        {{/putHere}}
+        {{/ifCond}}
+        {{#ifCond type "line"}}
+        <div class="cc-title"></div>
+        <div class="cc-editor-container"></div>
+        <div class="cc-button-container"></div>
+        {{/ifCond}}
+    </div>
+    {{/each}}
+</script>
+
+<script id="theta-carousel-options-template" type="text/x-handlebars-template">
+    <div class="theta-tabs">
+        <ul>
+            {{#each groups}}
+                <li><a href="#theta-carousel-group-{{id}}">{{title}}</a></li>
+            {{/each}}
+        </ul>
+        {{#each groups}}
+            <div id="theta-carousel-group-{{id}}">
+                <div class="cc-sttings-container">
+                    {{#if isGroups}}
+                        <div class="theta-tabs">
+                            <ul>
+                                {{#each groups}}
+                                <li><a href="#theta-carousel-group-{{id}}">{{title}}</a></li>
+                                {{/each}}
+                            </ul>
+                            {{#each groups}}
+                            <div id="theta-carousel-group-{{id}}">
+                                <div class="cc-sttings-container">
+                                    {{> options-partial }}
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    {{else}}
+                        {{> options-partial }}
+                    {{/if}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</script>
+
+<div id="next-prev">
+    <div class="cc-title">Move:</div>
+    <div class="cc-slider-container">
+        <button id="goFirst">First</button>
+        <button id="goPrev">Prev</button>
+        <button id="goNext">Next</button>
+        <button id="goEnd">End</button>
+    </div>
+    <div class="cc-button-container">
+
+    </div>
+</div>
+
+<div id="move-to">
+    <div class="cc-title">
+        <button id="move-to-button">Move To</button>
+    </div>
+    <div class="cc-slider-container">
+        <input id="move-to-index" />
+    </div>
+    <div class="cc-button-container">
+
+    </div>
+</div>
+
+<div id="get-width">
+    <div class="cc-title"></div>
+    <div class="cc-slider-container">
+        <button id="get-current-size-button">Get Current Size</button>
+    </div>
+    <div class="cc-button-container"></div>
+</div>
+
+
+<div id="predefined-configurations">
+    <div class="cc-title">Select Predefined Configuration:</div>
+    <div class="cc-editor-container">
+        <select id="configurations">
+            <option value="Parabola1" selected="selected">Parabola 1</option>
+            <option value="Bezier1">Bezier 1</option>
+            <option value="Bezier2">Bezier 2</option>
+            <option value="Bezier3">Bezier 3</option>
+        </select>
+    </div>
+    <div class="cc-button-container">
+        <button id="apply">Apply</button>
+    </div>
+</div>

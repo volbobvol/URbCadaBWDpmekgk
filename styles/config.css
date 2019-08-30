@@ -1,0 +1,93 @@
+﻿body {
+    font-size: 10px;
+}
+
+.theta-config-button {
+    margin-right: 5px;
+    cursor: pointer;
+    padding: 5px;
+    position: relative;
+    top: 0;
+    opacity: 0;
+    right: 3px;
+    position: absolute;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+.ui-dialog {
+    overflow: visible;
+    -webkit-transform: translate3d(0px, 0px, 100000px);
+}
+
+.theta-config-button:hover {
+    text-decoration: underline; 
+}
+
+div:hover>.theta-config-button {
+    opacity: 1;
+}
+
+.theta-tabs .cc-sttings-container {
+    display: table;
+    width: 100%;
+}
+
+.theta-tabs .cc-stting-container {
+    display: table-row;
+}
+
+.theta-tabs .cc-title {
+    display: table-cell;
+    white-space: nowrap;
+    padding-right: 20px;
+    vertical-align: middle;
+}
+
+.theta-tabs .cc-slider-container {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.theta-tabs .cc-checkbox-container {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.theta-tabs .cc-editor-container {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.theta-tabs .cc-button-container {
+    display: table-cell;
+    padding-left: 20px;
+}
+
+.theta-tabs .cc-select-container {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.cc-select-container-height {
+    max-height: 300px;
+}
+
+.cc-stting-container>div {
+    padding-top: 5px;
+}
+
+.ui-button-icon-only .ui-button-text {
+    text-indent: -9999px !important;
+}
+
+.cc-stting-container[data-type="line"] .cc-title,
+.cc-stting-container[data-type="line"] .cc-editor-container,
+.cc-stting-container[data-type="line"] .cc-button-container {
+    border-bottom: 1px solid #dddddd; 
+    height: 5px;
+}

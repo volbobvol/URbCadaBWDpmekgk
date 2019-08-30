@@ -1,0 +1,1744 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Theta Carousel</title>
+
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Styles/cupertino/jquery-ui.min.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="Scripts/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="node_modules/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=Sons-Of-Obsidian" type="text/javascript"></script>
+
+    <link href="Styles/animate.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery.popupoverlay.js"></script>
+    
+    <link href="Styles/site.css" rel="stylesheet" />
+    <link href="Styles/buttons.css" rel="stylesheet" />
+    <link href="Styles/transitions.css" rel="stylesheet" />
+    <link href="Styles/examples.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="landing small">
+        <header class="section section-header transition-height-background">
+            <div class="header-content">
+                <a href="index.html"><div class="logo transition-margin-top ransition-color"><span class="hide-for-small">Theta Carousel</span></div></a>
+                <div class="header-buttons transition-margin-top">
+                    <ul>
+                        <li>
+                            <a class="hide-for-small transition-color" href="index.html">Home</a>
+                            <a class="show-for-small transition-color a-icon" href="index.html" title="Home"><i style="font-size: 25px" class="fa fa-home fa-lg"></i></a>
+                        </li>
+                        <li class="hide-for-very-small">
+                            <a class="hide-for-small transition-color" href="index.html#examples">Examples</a>
+                            <a class="show-for-small transition-color a-icon" href="index.html#examples" title="Examples"><i style="font-size: 25px" class="fa fa-briefcase fa-lg"></i></a>
+                        </li>
+                        <li class="hide-for-very-small">
+                            <a class="hide-for-small transition-color" href="index.html#features">Features</a>
+                            <a class="show-for-small transition-color a-icon" href="index.html#features" title="Features"><i style="font-size: 25px" class="fa fa-star-o fa-lg"></i></a>
+                        </li>
+                        <li class="hide-for-very-small">
+                            <a class="hide-for-small transition-color" href="api.html">API</a>
+                            <a class="show-for-small transition-color a-icon" href="api.html" title="API"><i style="font-size: 25px" class="fa fa-question-circle fa-lg"></i></a>
+                        </li>
+                        <li>
+                            <a class="transition-color buy transition-all" href="https://codecanyon.net/item/theta-carousel-3d/12815028?ref=ThetaProject" target="_blank">Buy Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div style="padding: 10px; background: white;" id="help-container">
+            <div style="height:73px"></div>
+            <!--HELP BLOCK START-->
+            <div class="anchor" id="references">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        API
+                    </div>
+                    <div class="panel-body container-fluid">
+                        <div class="row">
+                            <div class="col-xs-3 a-list">
+                                <h4>Options</h4>
+
+                                <h5>General</h5>
+                                <a href="#filter">filter</a>
+                                <a href="#selectedIndex">selectedIndex</a>
+                                <a href="#distance">distance</a>
+                                <a href="#numberOfElementsToDisplayRight">numberOfElementsToDisplayRight</a>
+                                <a href="#numberOfElementsToDisplayLeft">numberOfElementsToDisplayLeft</a>
+                                <a href="#enabled">enabled</a>
+                                <a href="#designedForWidth">designedForWidth</a>
+                                <a href="#designedForHeight">designedForHeight</a>
+                                <a href="#fallback">fallback</a>
+                                <a href="#distanceInFallbackMode">distanceInFallbackMode</a>
+
+                                <h5>Scene</h5>
+                                <a href="#scaleX">scaleX</a>
+                                <a href="#scaleY">scaleY</a>
+                                <a href="#scaleZ">scaleZ</a>
+
+                                <a href="#path.settings.shiftX">path.settings.shiftX</a>
+                                <a href="#path.settings.shiftY">path.settings.shiftY</a>
+                                <a href="#path.settings.shiftZ">path.settings.shiftZ</a>
+
+                                <a href="#path.settings.rotationAngleXY">path.settings.rotationAngleXY</a>
+                                <a href="#path.settings.rotationAngleZY">path.settings.rotationAngleZY</a>
+                                <a href="#path.settings.rotationAngleZX">path.settings.rotationAngleZX</a>
+
+                                <a href="#path.settings.rotateElements">path.settings.rotateElements</a>
+
+                                <a href="#perspective">perspective</a>
+                                <a href="#mode3D">mode3D</a>
+
+                                <h5>Motion</h5>
+                                <a href="#rotationAnimationEasing">rotationAnimationEasing</a>
+                                <a href="#rotationAnimationDuration">rotationAnimationDuration</a>
+                                <a href="#sensitivity">sensitivity</a>
+                                <a href="#minKeyDownFrequency">minKeyDownFrequency</a>
+                                <a href="#verticalRotation">verticalRotation</a>
+                                <a href="#mousewheelEnabled">mousewheelEnabled<span class="version">v1.5</span></a>
+                                <a href="#keyboardEnabled">keyboardEnabled<span class="version">v1.5</span></a>
+                                <a href="#gesturesEnabled">gesturesEnabled<span class="version">v1.6</span></a>
+                                <a href="#inertiaFriction">inertiaFriction</a>
+                                <a href="#inertiaHighFriction">inertiaHighFriction</a>
+                                <a href="#autorotation">autorotation</a>
+                                <a href="#autorotationDirection">autorotationDirection</a>
+                                <a href="#autorotationPause">autorotationPause</a>
+
+                                <h5>Path</h5>
+                                <a href="#path.type">path.type</a>
+                                <a href="#path.settings.endless">path.settings.endless</a>
+                                <a href="#path.settings-parabola">path.settings for <b>parabola</b></a>
+                                <a class="shift-1" href="#path.settings-parabola.wideness">path.settings.wideness</a>
+
+                                <a href="#path.settings-cubic">path.settings for <b>cubic</b></a>
+                                <a class="shift-1" href="#path.settings-cubic.wideness">path.settings.wideness</a>
+
+                                <a href="#path.settings-archimedes_spiral">path.settings for <b>archimedes_spiral</b></a>
+                                <a class="shift-1" href="#path.settings.fi">path.settings.fi</a>
+                                <a class="shift-1" href="#path.settings.flatness">path.settings.flatness</a>
+
+                                <a href="#path.settings-ellipse">path.settings for <b>ellipse</b></a>
+                                <a class="shift-1" href="#path.settings.a">path.settings.a</a>
+                                <a class="shift-1" href="#path.settings.b">path.settings.b</a>
+
+                                <a href="#path.settings-cubic_bezier">path.settings for <b>cubic_bezier</b></a>
+                                <a class="shift-1" href="#path.settings.pathLength">path.settings.pathLength</a>
+                                <a class="shift-1" href="#path.settings.zeroPosition">path.settings.zeroPosition</a>
+                                <a class="shift-1" href="#path.settings.width">path.settings.width</a>
+                                <a class="shift-1" href="#path.settings.height">path.settings.height</a>
+                                <a class="shift-1" href="#path.settings.xyPathBezierPoints">path.settings.xyPathBezierPoints</a>
+                                <a class="shift-1" href="#path.settings.xzPathBezierPoints">path.settings.xzPathBezierPoints</a>
+                                <a class="shift-1" href="#path.settings.depth">path.settings.depth</a>
+                                <a class="shift-1" href="#path.settings.xyArcLengthBezierPoints">path.settings.xyArcLengthBezierPoints</a>
+
+                                <h5>Effects</h5>
+
+                                <a href="#allignElementsWithPath">allignElementsWithPath</a>
+                                <a class="shift-1" href="#allignElementsWithPathCoefficient">allignElementsWithPathCoefficient</a>
+
+                                <a href="#shadow">shadow</a>
+                                <a class="shift-1" href="#shadowBlurRadius">shadowBlurRadius</a>
+                                <a class="shift-1" href="#shadowSpreadRadius">shadowSpreadRadius</a>
+
+                                <a href="#fadeAway">fadeAway</a>
+                                <a class="shift-1" href="#fadeAwayNumberOfConfigurableElements">fadeAwayNumberOfConfigurableElements</a>
+                                <a class="shift-1" href="#fadeAwayBezierPoints">fadeAwayBezierPoints</a>
+
+                                <a href="#rotation">rotation</a>
+                                <a class="shift-1" href="#rotationNumberOfConfigurableElements">rotationNumberOfConfigurableElements</a>
+                                <a class="shift-1" href="#rotationBezierPoints">rotationBezierPoints</a>
+                                <a class="shift-1" href="#rotationVectorX">rotationVectorX</a>
+                                <a class="shift-1" href="#rotationVectorY">rotationVectorY</a>
+                                <a class="shift-1" href="#rotationVectorZ">rotationVectorZ</a>
+                                <a class="shift-1" href="#rotationInvertForNegative">rotationInvertForNegative</a>
+
+                                <a href="#sizeAdjustment">sizeAdjustment</a>
+                                <a class="shift-1" href="#sizeAdjustmentNumberOfConfigurableElements">sizeAdjustmentNumberOfConfigurableElements</a>
+                                <a class="shift-1" href="#sizeAdjustmentBezierPoints">sizeAdjustmentBezierPoints</a>
+
+                                <a href="#popoutSelected">popoutSelected</a>
+                                <a class="shift-1" href="#popoutSelectedShiftX">popoutSelectedShiftX</a>
+                                <a class="shift-1" href="#popoutSelectedShiftY">popoutSelectedShiftY</a>
+                                <a class="shift-1" href="#popoutSelectedShiftZ">popoutSelectedShiftZ</a>
+
+                                <a href="#reflection">reflection</a>
+                                <a class="shift-1" href="#reflectionBelow">reflectionBelow</a>
+                                <a class="shift-1" href="#reflectionHeight">reflectionHeight</a>
+
+                            </div>
+                            <div class="col-xs-3 a-list">
+                                <h4>Methods</h4>
+                                <a href="#moveTo">moveTo</a>
+                                <a href="#moveBack">moveBack</a>
+                                <a href="#moveForward">moveForward</a>
+                                <a href="#getIsInMotion">getIsInMotion</a>
+                                <a href="#getIsFallbackMode">getIsFallbackMode</a>
+                                <a href="#invalidate">invalidate</a>
+                                <a href="#update">update<span class="version">v1.4</span></a>
+                                <a href="#destroy">destroy</a>
+                            </div>
+                            <div class="col-xs-3 a-list">
+                                <h4>Events</h4>
+                                <a href="#change">change</a>
+                                <a href="#motionStart">motionStart</a>
+                                <a href="#motionEnd">motionEnd</a>
+                            </div>
+                            <div class="col-xs-3 a-list">
+                                <h4>How to...</h4>
+                                <a href="#add-to-page">Add carousel to a web page</a>
+                                <a href="#add-to-angularjs-app">Add carousel to a AngularJS app<span class="version">v1.6</span></a>
+                                <a href="#configurator">Configure carousel</a>
+                                <a href="#method-invocation">Invoke carousel method</a>
+                                <a href="#bind-listener">Bind an event listener to event</a>
+                                <a href="#update-property-val">Update property value</a>
+                                <a href="#get-property-val">Get property value</a>
+                                <a href="#get-version">Get carousel version number</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 style="text-align: center">Options</h1>
+
+            <div class="anchor" id="filter">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        filter
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Selector of the carousel items.</p>
+                        <p><b>Type</b>: String</p>
+                        <p><b>Default</b>: <code>"div"</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="selectedIndex">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        selectedIndex
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Index of the selected item.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>0</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="distance">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        distance
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Distance between items.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>70</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="numberOfElementsToDisplayRight">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        numberOfElementsToDisplayRight
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> The number of visible items to the right.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>null</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="numberOfElementsToDisplayLeft">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        numberOfElementsToDisplayLeft
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> The number of visible items to the left.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>null</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="enabled">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        enabled
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Indicates whether the carousel can respond to user interaction.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>true</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="designedForWidth">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        designedForWidth
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> The carousel width defined during configuration. This value is used while scaling.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>null</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="designedForHeight">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        designedForHeight
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> The carousel height defined during configuration. This value is used while scaling.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>null</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="fallback">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        fallback
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Fallback mode. In fallback mode carousel does not use any 3D transformations and displays all items as a plain horizontal list.</p>
+                        <p><b>Type</b>: String</p>
+                        <p><b>Default</b>: <code>"auto"</code></p>
+                        <p><b>Property Values:</b></p>
+                        <div style="margin-left: 40px">
+                            <p><code>"auto"</code> Carousel automatically detects if browser support 3D transformations, and uses fallback mode if it doesn't.</p>
+                            <p><code>"always"</code> Always use fallback mode.</p>
+                            <p><code>"never"</code> Never use fallback mode.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="distanceInFallbackMode">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        distanceInFallbackMode
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Distance between carousel element's centers in fallback mode.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>200</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="mode3D">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        mode3D
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> 3D mode.</p>
+                        <p><b>Type</b>: String</p>
+                        <p><b>Default</b>: <code>"z"</code></p>
+                        <p><b>Property Values:</b></p>
+                        <div style="margin-left: 40px">
+                            <p><code>"z"</code> Real 3D.</p>
+                            <p><code>"scale"</code> Simulated 3D mode that is based on object scaling. 'Scale' differs from 'Real 3D' in that with distance along the Z axis items do not shift to the center of the scene.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="scaleX">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        scaleX
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Scaling the scene along the X-axis.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>1</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="scaleY">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        scaleY
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Scaling the scene along the Y-axis.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>1</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="scaleZ">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        scaleZ
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Scaling the scene along the Z-axis.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>1</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="path.settings.shiftX">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.settings.shiftX
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Shifting the scene along the X-axis.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>0</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="path.settings.shiftY">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.settings.shiftY
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Shifting the scene along the Y-axis.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>0</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="path.settings.shiftZ">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.settings.shiftZ
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Shifting the scene along the Z-axis.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>0</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="path.settings.rotationAngleXY">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.settings.rotationAngleXY
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Rotating the scene in the X-Y plane.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>0</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="path.settings.rotationAngleZX">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.settings.rotationAngleZX
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Rotating the scene in the Z-X plane.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>0</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="path.settings.rotationAngleZY">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.settings.rotationAngleZY
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Rotating the scene in the Z-Y plane.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>0</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="path.settings.rotateElements">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.settings.rotateElements
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Applying <a href="#path.settings.rotationAngleXY">path.settings.rotationAngleXY</a>, <a href="#path.settings.rotationAngleZY">path.settings.rotationAngleZY</a>, <a href="#path.settings.rotationAngleZX">path.settings.rotationAngleZX</a> not only to rotaion path but also to element's plane.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>false</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="perspective">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        perspective
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Perspective. The larger the perspective, the less impact the distance along the Z-axis has on the object size.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>1000</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="mode3D">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        mode3D
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> 3D mode.</p>
+                        <p><b>Type</b>: String</p>
+                        <p><b>Default</b>: <code>"z"</code></p>
+                        <p><b>Property Values:</b></p>
+                        <div style="margin-left: 40px">
+                            <p><code>"z"</code> Real 3D.</p>
+                            <p><code>"scale"</code> Simulated 3D mode that is based on object scaling. 'Scale' differs from 'Real 3D' in that with distance along the Z axis items do not shift to the center of the scene.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="rotationAnimationEasing">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        rotationAnimationEasing
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Defines the velocity curve when the carousel changes its position. Effects one position shift only. When rotation involves several position shifts, the easing velocity remains the same.</p>
+                        <p><b>Type</b>: String</p>
+                        <p><b>Default</b>: <code>"easeOutCubic"</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="rotationAnimationDuration">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        rotationAnimationDuration
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Duration of one rotation of the carousel.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>500</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="sensitivity">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        sensitivity
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Sensitivity to mouse movements and touches. Negative values make the carousel move in the direction that is opposite to the mouse direction.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>1</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="minKeyDownFrequency">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        minKeyDownFrequency
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> The carousel ignores key board hits done after the last interval that is shorter than the specified value.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>0</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="verticalRotation">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        verticalRotation
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Gesture recognition mode. <code>False</code> - horisontal gestures, <code>true</code> vertical gestures.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>false</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="mousewheelEnabled">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        mousewheelEnabled<span class="version">v1.5</span>
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> If <code>False</code> the carousel does not process mousewheel events.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>true</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="keyboardEnabled">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        keyboardEnabled<span class="version">v1.5</span>
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> If <code>False</code> the carousel does not process keyboard events.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>true</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="gesturesEnabled">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        gesturesEnabled<span class="version">v1.6</span>
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> If <code>False</code> the carousel does not react on mouse and touch gestures.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>true</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="inertiaFriction">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        inertiaFriction
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> The friction parameter in the physical model of inertia movement. Effects how far the carousel will be rotated after the user releases the mouse key.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>10</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="inertiaHighFriction">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        inertiaHighFriction
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> The friction parameter in the physical movement model behind the extreme right and left positions of the carousel.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>50</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="autorotation">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        autorotation
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> If true, carousel rotates automatically.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>false</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="autorotationDirection">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        autorotationDirection
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Direction of automatic rotation.</p>
+                        <p><b>Type</b>: String</p>
+                        <p><b>Default</b>: <code>"right"</code></p>
+                        <p><b>Property Values:</b></p>
+                        <div style="margin-left: 40px">
+                            <p><code>"right"</code></p>
+                            <p><code>"left"</code></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="autorotationPause">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        autorotationPause
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Pause in milliseconds between auto-rotation steps.</p>
+                        <p><b>Type</b>: Number</p>
+                        <p><b>Default</b>: <code>0</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="path.type">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.type
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> The path along which the items are arranged.</p>
+                        <p><b>Type</b>: String</p>
+                        <p><b>Default</b>: <code>"parabola"</code></p>
+                        <p><b>Property Values:</b></p>
+                        <div style="margin-left: 40px">
+                            <p><code>"line"</code> Line.</p>
+                            <p><code><a href="#path.settings-parabola">"parabola"</a></code> Parabola.</p>
+                            <p><code><a href="#path.settings-cubic">"cubic"</a></code> Cubic parabola.</p>
+                            <p><code><a href="#path.settings-archimedes_spiral">"archimedes_spiral"</a></code> Archimedes’ spiral.</p>
+                            <p><code><a href="#path.settings-ellipse">"ellipse"</a></code> Ellipse.</p>
+                            <p><code><a href="#path.settings-cubic_bezier">"cubic_bezier"</a></code> Cubic Bezier curve.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="path.settings.endless">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.settings.endless
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Circular rotation.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>false</code></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="path.settings-parabola">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.settings for <b>parabola</b>
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <div class="anchor" id="path.settings-parabola.wideness">
+                            <div class="panel panel-default" style="margin-bottom: 0px;">
+                                <div class="panel-heading">
+                                    path.settings.wideness
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Width of parabola branches.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>200</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="path.settings-cubic">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.settings for <b>cubic</b>
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <div class="anchor" id="path.settings-cubic.wideness">
+                            <div class="panel panel-default" style="margin-bottom: 0px;">
+                                <div class="panel-heading">
+                                    path.settings.wideness
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Width of parabola branches.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>200</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="path.settings-archimedes_spiral">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.settings for <b>archimedes_spiral</b>
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <div class="anchor" id="path.settings.fi">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    path.settings.fi
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Distance between the spiral rings.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>10</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anchor" id="path.settings.flatness">
+                            <div class="panel panel-default" style="margin-bottom: 0px;">
+                                <div class="panel-heading">
+                                    path.settings.flatness
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Indicates how flat the spiral is in the Z-axis. When set to '0', all items reside in the same plane. The larger the value, the more distant the items are from the current one in the Z-axis.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>10</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="path.settings-ellipse">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.settings for <b>ellipse</b>
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <div class="anchor" id="path.settings.a">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    path.settings.a
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Width.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>200</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anchor" id="path.settings.b">
+                            <div class="panel panel-default" style="margin-bottom: 0px;">
+                                <div class="panel-heading">
+                                    path.settings.b
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Depth.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>200</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="path.settings-cubic_bezier">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        path.settings for <b>cubic_bezier</b>
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <div class="anchor" id="path.settings.pathLength">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    path.settings.pathLength
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> The entire curve length. Together with the distance parameter defines the number of items that can be displayed in the curve at a time.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>1000</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anchor" id="path.settings.zeroPosition">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    path.settings.zeroPosition
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Position in the curve which defines location of the selected item.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>0.5</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anchor" id="path.settings.width">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    path.settings.width
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Curve width.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>1000</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anchor" id="path.settings.height">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    path.settings.height
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Curve height.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>1000</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anchor" id="path.settings.xyPathBezierPoints">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    path.settings.xyPathBezierPoints
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Bezier curve in the X-Y plane.</p>
+                                    <p><b>Type</b>: Object</p>
+                                    <p><b>Default</b>: <code class="prettyprint lang-js">{ p1: { x: -100, y: 0 }, p2: { x: 0, y: 0 }, p3: { x: 0, y: 0 }, p4: { x: 100, y: 0 } }</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anchor" id="path.settings.xzPathBezierPoints">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    path.settings.xzPathBezierPoints
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Bezier curve in the X-Z plane. The setting is used only if <a href="#path.settings.depth">path.settings.depth</a> is not '0'.</p>
+                                    <p><b>Type</b>: Object</p>
+                                    <p><b>Default</b>: <code class="prettyprint lang-js">{ p1: { x: -100, y: 0 }, p2: { x: 0, y: 0 }, p3: { x: 0, y: 0 }, p4: { x: 100, y: 0 } }</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anchor" id="path.settings.depth">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    path.settings.depth
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Curve depth.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>1000</code></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anchor" id="path.settings.xyArcLengthBezierPoints">
+                            <div class="panel panel-default" style="margin-bottom: 0px;">
+                                <div class="panel-heading">
+                                    path.settings.xyArcLengthBezierPoints
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Bezier curve that defines the distribution density of items in the main path.</p>
+                                    <p><b>Type</b>: Object</p>
+                                    <p><b>Default</b>: <code class="prettyprint lang-js">{ p1: { x: 0, y: 0 }, p2: { x: 50, y: 50 }, p3: { x: 50, y: 50 }, p4: { x: 100, y: 100 } }</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="allignElementsWithPath">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        allignElementsWithPath
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Aligns the items to the path.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>false</code></p>
+                    </div>
+                    <div class="panel-body" style="padding-top: 0px;">
+                        <div class="anchor" id="allignElementsWithPathCoefficient">
+                            <div class="panel panel-default" style="margin-bottom: 0px;">
+                                <div class="panel-heading">
+                                    allignElementsWithPathCoefficient
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Rotation factor.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>1</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="shadow">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        shadow
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Applies the shadow effect.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>false</code></p>
+                    </div>
+                    <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
+                        <div class="anchor" id="shadowBlurRadius">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    shadowBlurRadius
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Blur radius.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>100</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="margin-bottom: 0px; padding-top: 0px;">
+                        <div class="anchor" id="shadowSpreadRadius">
+                            <div class="panel panel-default" style="margin-bottom: 0px;">
+                                <div class="panel-heading">
+                                    shadowSpreadRadius
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Shadow radius.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>0</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="fadeAway">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        fadeAway
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Transparency of distant items.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>false</code></p>
+                    </div>
+                    <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
+                        <div class="anchor" id="fadeAwayNumberOfConfigurableElements">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    fadeAwayNumberOfConfigurableElements
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> The number of items to the left and to the right of the item to which the configuration is applicable. All items located farther will be as transparent as the last item that is being configured.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>5</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="margin-bottom: 0px; padding-top: 0px;">
+                        <div class="anchor" id="fadeAwayBezierPoints">
+                            <div class="panel panel-default" style="margin-bottom: 0px;">
+                                <div class="panel-heading">
+                                    fadeAwayBezierPoints
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Cubic Bezier curve defines the change of transparency in the interval starting from the current one with the length defined by <a href="#fadeAwayNumberOfConfigurableElements">fadeAwayNumberOfConfigurableElements</a>.</p>
+                                    <p><b>Type</b>: Object</p>
+                                    <p><b>Default</b>: <code class="prettyprint lang-js">{ p1: { x: 0, y: 100 }, p2: { x: 50, y: 50 }, p3: { x: 50, y: 50 }, p4: { x: 100, y: 0 } }</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="rotation">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        rotation
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Rotation of items.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>false</code></p>
+                    </div>
+                    <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
+                        <div class="anchor" id="rotationNumberOfConfigurableElements">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    rotationNumberOfConfigurableElements
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> The number of items to the left and to the right of the item to which the configuration is applicable. All elements located farther will have the same rotation factor as the last item that is being configured.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>5</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
+                        <div class="anchor" id="rotationBezierPoints">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    rotationBezierPoints
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Cubic Bezier curve defines the change of rotation factor of the item in the interval starting from the current one with the length defined by <a href="#rotationNumberOfConfigurableElements">rotationNumberOfConfigurableElements</a>.</p>
+                                    <p><b>Type</b>: Object</p>
+                                    <p><b>Default</b>: <code class="prettyprint lang-js">{ p1: { x: 0, y: 0 }, p2: { x: 50, y: 0 }, p3: { x: 50, y: 0 }, p4: { x: 100, y: 0 } }</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
+                        <div class="anchor" id="rotationVectorX">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    rotationVectorX
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> X-coordinate of the vector around which the rotation occurs.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>0</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
+                        <div class="anchor" id="rotationVectorY">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    rotationVectorY
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Y-coordinate of the vector around which the rotation occurs.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>0</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
+                        <div class="anchor" id="rotationVectorZ">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    rotationVectorZ
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Z-coordinate of the vector around which the rotation occurs.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>0</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="margin-bottom: 0px; padding-top: 0px;">
+                        <div class="anchor" id="rotationInvertForNegative">
+                            <div class="panel panel-default" style="margin-bottom: 0px;">
+                                <div class="panel-heading">
+                                    rotationInvertForNegative
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Inverts rotation to the negative for items located to the left of the selected one.</p>
+                                    <p><b>Type</b>: bool</p>
+                                    <p><b>Default</b>: <code>false</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="sizeAdjustment">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        sizeAdjustment
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Size adjustment of the object.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>false</code></p>
+                    </div>
+                    <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
+                        <div class="anchor" id="sizeAdjustmentNumberOfConfigurableElements">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    sizeAdjustmentNumberOfConfigurableElements
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> The number of items to the left and to the right of the item to which the configuration is applicable. All elements located farther will have the same size adjustmen as the last item that is being configured.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>5</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="margin-bottom: 0px; padding-top: 0px;">
+                        <div class="anchor" id="sizeAdjustmentBezierPoints">
+                            <div class="panel panel-default" style="margin-bottom: 0px;">
+                                <div class="panel-heading">
+                                    sizeAdjustmentBezierPoints
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Cubic Bezier curve defines the change of size adjustment of the item in the interval starting from the current one with the length defined by <a href="#sizeAdjustmentNumberOfConfigurableElements">sizeAdjustmentNumberOfConfigurableElements</a>.</p>
+                                    <p><b>Type</b>: Object</p>
+                                    <p><b>Default</b>: <code class="prettyprint lang-js">{ p1: { x: 0, y: 100 }, p2: { x: 50, y: 100 }, p3: { x: 50, y: 100 }, p4: { x: 100, y: 100 } }</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="popoutSelected">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        popoutSelected
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Shift of the selected item.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>false</code></p>
+                    </div>
+                    <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
+                        <div class="anchor" id="popoutSelectedShiftX">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    popoutSelectedShiftX
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Shift along the X-axis.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>0</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
+                        <div class="anchor" id="popoutSelectedShiftY">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    popoutSelectedShiftY
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Shift along the Y-axis.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>0</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="margin-bottom: 0px; padding-top: 0px;">
+                        <div class="anchor" id="popoutSelectedShiftZ">
+                            <div class="panel panel-default" style="margin-bottom: 0px;">
+                                <div class="panel-heading">
+                                    popoutSelectedShiftZ
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Shift along the Z-axis.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>0</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="reflection">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        reflection
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Reflection of elements.</p>
+                        <p><b>Type</b>: bool</p>
+                        <p><b>Default</b>: <code>false</code></p>
+                    </div>
+                    <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
+                        <div class="anchor" id="reflectionBelow">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    reflectionBelow
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Distance between the element and the reflection.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>0</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" style="padding-top: 0px; padding-bottom: 0px;">
+                        <div class="anchor" id="reflectionHeight">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    reflectionHeight
+                                    <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="panel-body">
+                                    <p><b>Description:</b> Indicates the size of the reflection.</p>
+                                    <p><b>Type</b>: Number</p>
+                                    <p><b>Default</b>: <code>0</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h1 style="text-align: center">Methods</h1>
+
+            <div class="anchor" id="moveTo">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        moveTo( index )
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Moves the carousel to the item defined in the parameter.</p>
+                        <hr />
+                        <p><b>index</b></p>
+                        <p>Type: Number</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="moveBack">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        moveBack( )
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Moves the carousel one position to the right.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="moveForward">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        moveForward( )
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Moves the carousel one position to the left.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="getIsInMotion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        getIsInMotion( )
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Returns <code>true</code> if the carousel is now in motion, and <code>false</code> otherwise.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="getIsFallbackMode">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        getIsFallbackMode( )
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Returns <code>true</code> if the carousel is in fallback mode, and <code>false</code> otherwise.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="invalidate">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        invalidate( )
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Updates the positions of all items of the carousel.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="update">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        update( )<span class="version">v1.4</span>
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Updates the carousel when some items has been added or deleted.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="destroy">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        destroy( )
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> Removes all event handlers added by the carousel from the DOM objects.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h1 style="text-align: center">Events</h1>
+
+            <div class="anchor" id="change">
+                <div class="panel panel-default" id="">
+                    <div class="panel-heading">
+                        change
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> The index of the object has been changed.</p>
+                        <p><b>Handler Example:</b>
+                            <pre class="prettyprint lang-js">
+function (e, data) {
+    console.log(data.index); // selectedIndex
+};
+</pre>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anchor" id="motionStart">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        motionStart
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> The carousel started its motion.</p>
+                        <p>
+                            <b>Handler Example:</b>
+                            <pre class="prettyprint lang-js">
+function (e, data) {
+    console.log(data.index); // selectedIndex
+};
+</pre>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anchor" id="motionEnd">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        motionEnd
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p><b>Description:</b> The carousel ended its motion.</p>
+                        <p>
+                            <b>Handler Example:</b>
+                            <pre class="prettyprint lang-js">
+function (e, data) {
+    console.log(data.index); // selectedIndex
+};
+</pre>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h1 style="text-align: center">How to...</h1>
+            <div class="anchor" id="add-to-page">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Adding Carousel to a Web page
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p>The carousel has been designed as a jQuery plug-in. Thus, to add it to a Web page is as easy as any other plug-in.</p>
+                        <p>
+                            <pre class="prettyprint lang-js">
+$('selector').theta_carousel({ /*options*/ });
+</pre>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="anchor" id="add-to-angularjs-app">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Add carousel to a AngularJS app<span class="version">v1.6</span>
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p>Starting from version 1.6.0 Theta Carousel includes AngularJS directive.
+
+                            To use Theta Carousel in your AngularJS App yo need:
+                            <ol>
+                                <li>
+                                    Add <code>theta-carousel-angular-directive.min.js</code> to your code.
+                                    <pre class="prettyprint lang-html" style="margin-top: 7px;">&lt;script src=&quot;theta-carousel-angular-directive.min.js&quot;&gt;&lt;/script&gt;</pre>
+                                </li>
+                                <li>
+                                    Add the <code>theta</code> module as a dependency to your application module.
+                                    <pre class="prettyprint lang-js" style="margin-top: 7px;">angular.module('MyApp', ['theta'])</pre>
+                                </li>
+                                <li>
+                                    Add <code>theta-crousel</code> tag to your markap
+                                    <pre class="prettyprint lang-html" style="margin-top: 7px;">
+&lt;theta-crousel ng-model=&quot;controller.items&quot;
+    selected-index=&quot;controller.selectedItemIndex&quot;&gt;
+        &lt;div ng-repeat=&quot;item in controller.items&quot;&gt;
+            ....
+        &lt;/div&gt;
+&lt;/theta-crousel&gt;</pre>
+                                </li>
+                                <li>
+                                    Configure carousle using our visual <a href="#configurator">Configurator</a>.
+                                </li>
+                                <li>
+                                    Get carousel tag snippet using "Get AngularJS Tag" button, and put it into your markap.
+                                </li>
+                            </ol>
+                        </p>
+                        <p>
+                        
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="anchor" id="configurator">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Configurator
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p>
+                            The rich API allows configuring practically any aspect of the carousel behavior from visual effects to the parameters of physical model. To facilitate understanding of some complex parameters, we designed the Configurator. It allows changing any parameter of the carousel in interactive mode and see how the change effects the carousel behavior. This makes the configuration process fast, easy, intuitive and even engaging.
+                            After the carousel configuration is over, click the Get Script button to instantly get the configuration script.
+                            The Configurator is not built-in in the carousel, which eliminates the issue of downloading excessive scripts. To start the Configurator, simply run the following script in the browser console:
+                        </p>
+
+                        <pre class="prettyprint lang-js">
+(function(id) {
+    var js, hjs = document.getElementsByTagName('script')[0];
+    if (document.getElementById(id)) return;
+    js = document.createElement('script'); 
+    js.id = id;
+    js.src = "http://theta-carousel.com/scripts/boot.js";
+    hjs.parentNode.insertBefore(js, hjs);
+}('theta-carousel-config'));
+</pre>
+                        <p>
+                            This script downloads the Configurator directly from our website.
+                            Once the Configurator is downloaded, hover over the mouse on the carousel to view the Configure button in the upper-right corner. By clicking the button, you will launch the configuration interface.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="anchor" id="method-invocation">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Method invocation
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p>The carousel has been designed as a jQuery plug-in. Thus, you can use the same method invocation syntax as for any other plug-in.</p>
+                        <p>
+                            <pre class="prettyprint lang-js">
+$('selector').theta_carousel('moveForward');
+// or
+$('selector').theta_carousel('moveTo', 10); // for methods with arguments
+</pre>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="anchor" id="bind-listener">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Bind an event listener to event
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p>The carousel has been designed as a jQuery plug-in. Thus, you can use the same event listener attaching syntax as for any other plug-in.</p>
+                        <p>
+                            <pre class="prettyprint lang-js">
+$('selector').on('change', function(e, data){
+
+});
+</pre>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="anchor" id="update-property-val">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Update property value
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p>The carousel has been designed as a jQuery plug-in. Thus, you can use the same update property syntax as for any other plug-in.</p>
+                        <p>
+                            <pre class="prettyprint lang-js">
+$('selector').theta_carousel({
+    'path.settings.shiftZ': 0,
+    'path.settings.shiftY': 0,
+    'path.settings.a': 500,
+    'path.settings.b': 500
+});
+</pre>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="anchor" id="get-property-val">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Get property value
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p>The carousel has been designed as a jQuery plug-in. Thus, you can use the same get property syntax as for any other plug-in.</p>
+                        <p>
+                            <pre class="prettyprint lang-js">
+$('selector').theta_carousel('option', 'path.settings.shiftZ');
+</pre>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="anchor" id="get-version">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Get carousel version number
+                        <a href="#references" style="float:right"><span class="fa fa-arrow-up fa-lg" aria-hidden="true"></span></a>
+                    </div>
+                    <div class="panel-body">
+                        <p>To get the version of theta carousel that you use, just execute the following code in browser console:</p>
+                        <p>
+                            <pre class="prettyprint lang-js">
+$.theta.carousel.version;
+</pre>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--HELP BLOCK END-->
+        </div>
+    </div>
+    <div class="section"></div>
+    <div class=" section copyright">
+        Copyright © 2015 Theta Carousel
+    </div>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-67230770-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+</html>
