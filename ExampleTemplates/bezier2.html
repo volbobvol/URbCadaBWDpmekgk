@@ -1,0 +1,87 @@
+﻿<style type="text/css">
+
+    img {
+        vertical-align: middle;
+    }
+
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .ex-item {
+        height: 500px;
+        width: 700px;
+        display: none;
+        overflow: hidden;
+        border: 7px solid white;
+        background-color: #5EBDC4;
+    }
+
+    .ex-item .round-button {
+        font-size: 45px;
+        height: 200px;
+        width: 200px;
+        background: rgba(71, 160, 71, 0.65);
+        position: relative;
+        top: -100px;
+        border-radius: 100px;
+        padding-left: 30px;
+        padding-top: 27px;
+        right: -600px;
+        cursor: pointer;
+    }
+
+    .ex-item:hover .round-button {
+        font-size: 64px;
+        height: 300px;
+        width: 300px;
+        background: rgba(71, 160, 71, 0.85);
+        position: relative;
+        right: -550px;
+        top: -150px;
+        border-radius: 150px;
+        padding-left: 45px;
+        padding-top: 41px;
+    }
+
+    .button-hover-transition {
+        -webkit-transition: all 0.5s cubic-bezier(0.42, 0, 0.15, 1.61);
+        -moz-transition: all 0.5s cubic-bezier(0.42, 0, 0.15, 1.61);
+        -ms-transition: all 0.5s cubic-bezier(0.42, 0, 0.15, 1.61);
+        -o-transition: all 0.5s cubic-bezier(0.42, 0, 0.15, 1.61);
+    }
+</style>
+<script id="popupLayout" type="text/mustache">
+    <div class="close-btn" style="background: white;
+          background: white;
+          position: absolute;
+          right: -40px;
+          width: 80px;
+          height: 80px;
+          top: -40px;
+          border-radius: 40px;
+          padding-top: 45px;
+          padding-left: 14px;
+          font-size: 18px;">
+        <i class="fa fa-close fa-lg" style="cursor: pointer;"></i>
+    </div>
+    <img style="border: 7px solid white;" width="725" height="562" src="{{bo}}.{{bc}}" />
+</script>
+<div style="height: 200px; position: absolute; width: 100%;">
+    <div style="bottom: 0px; position: absolute; text-align: center; width: 100%; font-weight:300; font-size: 60px; display: block; color: rgb(205, 238, 245);" class="title">title text</div>
+</div>
+{{#items}}
+<div class="ex-item">
+    
+    
+    <div style="height: 500px; width: 700px; background-repeat: no-repeat; background-position: center; background-size: cover; background-image: url({{.}})">
+
+    </div>
+    <div class="round-button button-hover-transition">
+        <i data-content="{{.}}" class="popup-link fa fa-folder-open fa-lg"></i>
+    </div>
+</div>
+{{/items}}
+<div style="height: 200px;bottom: 0px; width: 100%; position: absolute; text-align: center; font-size: 30px; display: block;" class="description">Description comment</div>

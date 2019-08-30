@@ -1,0 +1,22 @@
+﻿
+<style type="text/css">
+    img {
+        vertical-align: middle;
+    }
+
+    .ex-item {
+        height: 282px;
+        width: 214px;
+        display: none;
+        border: 7px solid white;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+</style>
+
+{{#items}}
+<div class="ex-item">
+    <img src="{{.}}" />
+</div>
+{{/items}}

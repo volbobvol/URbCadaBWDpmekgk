@@ -1,0 +1,25 @@
+﻿
+<style type="text/css">
+    img {
+        vertical-align: middle;
+    }
+
+    .ex-item {
+        height: 433px;
+        width: 260px;
+        display: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+</style>
+
+<div style="height: 120px; position: absolute; right: 0px; width: 600px;">
+    <div style="bottom: 0px; position: absolute; text-align: center; width: 100%; font-weight: 300; font-size: 40px; display: block; color: rgb(205, 238, 245);" class="title">title text</div>
+</div>
+{{#items}}
+<div class="ex-item">
+    <img src="{{.}}" />
+</div>
+{{/items}}
+<div style=" height: 200px; width: 553px; position: absolute; font-size: 23px; display: block; right: 22px; text-indent: 30px; top: 143px;" class="text">Description comment comment</div>

@@ -1,0 +1,31 @@
+﻿<style type="text/css">
+    img {
+        vertical-align: middle;
+    }
+
+    .ex-item {
+        height: 218px;
+        width: 200px;
+        display: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .shelf {
+        background-image: linear-gradient(to bottom, rgba(67, 95, 186, 0.21) 0%, #36C2DB 100%);
+        background: -webkit-linear-gradient(top, rgba(67, 95, 186, 0.21) 0%, #36C2DB 100%);
+        transform: skew(-45deg);
+        -webkit-transform: skew(-45deg);
+        border-bottom: 4px solid #448A97;
+        border-right: 4px solid #52A0AE;
+    }
+</style>
+<div class="shelf"  style="height: 200px; position: absolute; width: 100%; top: 345px; margin-left: 100px; width: 1400px;">
+
+</div>
+{{#items}}
+<div class="ex-item">
+    <img src="{{.}}" />
+</div>
+{{/items}}
