@@ -27,10 +27,10 @@
 }
 
 function LoadCSS(href, id) {
-    if ($('#' + id).length > 0)
+    if (jQuery('#' + id).length > 0)
         return;
-    var cssLink = $("<link id='" + id + "' rel='stylesheet' type='text/css' href='" + href + "'>");
-    $("head").append(cssLink);
+    var cssLink = jQuery("<link id='" + id + "' rel='stylesheet' type='text/css' href='" + href + "'>");
+    jQuery("head").append(cssLink);
 };
 
 function LoadMultipleFiles(files, callback) {
@@ -58,27 +58,27 @@ function LoadMultipleFiles(files, callback) {
     nextFile();
 }
 
-$(document).ready(function () {
+jQuery(document).ready(function () {
     var loadMainContent = function() {
         LoadMultipleFiles(
             [
-                { type: 'js', url: 'http://theta-carousel.com/Scripts/config.js', id: 'config' },
-                { type: 'css', url: 'http://theta-carousel.com/Styles/config.css', id: 'confCss' }
+                { type: 'js', url: 'https://theta-carousel.com/Scripts/config.js', id: 'config' },
+                { type: 'css', url: 'https://theta-carousel.com/Styles/config.css', id: 'confCss' }
             ],
             function() {
-                $('.theta-carousel').carousel_config({
-                    htmlUrl: "http://theta-carousel.com/config-ui.html"
+                jQuery('.theta-carousel').carousel_config({
+                    htmlUrl: "https://theta-carousel.com/config-ui.html"
                 });
             }
         );
     };
 
-    if (typeof ($.ui) == "undefined") {
+    if (typeof (jQuery.ui) == "undefined") {
         // load jQuery UI
         LoadMultipleFiles(
             [
-                { type: 'js', url: 'http://code.jquery.com/ui/1.12.1/jquery-ui.min.js', id: 'jqUIJs' },
-                { type: 'css', url: 'http://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css', id: 'jqUICss' }
+                { type: 'js', url: 'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js', id: 'jqUIJs' },
+                { type: 'css', url: 'https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css', id: 'jqUICss' }
             ],
             loadMainContent
         );
