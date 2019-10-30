@@ -1,0 +1,95 @@
+﻿.carousel .item {
+    height: 100%;
+    opacity: 0.1;
+}
+
+.carousel .carousel-inner .active {
+    opacity: 1;
+    -webkit-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out;
+    -moz-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out;
+    -ms-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out;
+    -o-transition: opacity 0.25s ease-in-out, height 0.25s ease-in-out;
+}
+
+.carousel .glyphicon-chevron-left {
+    background-image: url(../Images/promo_carousel_left.png);
+    width: 40px;
+    height: 40px;
+}
+
+.left:hover .glyphicon-chevron-left {
+    background-position: 0px -40px;
+}
+
+.carousel .glyphicon-chevron-left:before {
+    content: '';
+}
+
+.carousel .glyphicon-chevron-right{
+    background-image: url(../Images/promo_carousel_right.png);
+    width: 40px;
+    height: 40px;
+}
+
+.right:hover .glyphicon-chevron-right {
+    background-position: 0px -40px;
+}
+
+.carousel .glyphicon-chevron-right:before {
+    content: '';
+}
+
+.carousel-control.right {
+    background: none;
+}
+
+.carousel-control.left {
+    background: none;
+}
+
+.carousel-indicators li{
+    background-image: url(../Images/promo_carousel_bullet.png);
+    width: 20px;
+    height: 20px;
+    border: none;
+    margin: 0px;
+}
+
+.carousel-indicators .active{
+    background-color: transparent;
+    background-position: 0px -20px;
+    width: 20px;
+    height: 20px;
+}
+
+.slide-content {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.slide-text {
+    font-size: 29px;
+    font-family: Lato;
+    color: white;
+    font-weight: 300;
+}
+
+.slide1 {
+
+}
+
+.slide2 {
+
+}
+
+.slide3 {
+
+}
+
+.slide4 {
+
+}
