@@ -149,8 +149,13 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
     border-radius: 5em;
 }
 
-#examples .divider:last-of-type:after{
-    visibility:hidden;
+.example-preview-div.divider:after {
+    width: 60px;
+    margin: auto;
+}
+
+#examples .divider:last-of-type:after {
+    visibility: hidden;
 }
 
 #examples .section-header .divider:last-of-type:after {
