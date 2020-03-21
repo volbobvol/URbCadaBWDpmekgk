@@ -64,7 +64,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 
 .logo {
     float: left;
-    background-image: url(../Images/logo.png);
+    background-image: url(../images/logo.png);
     background-repeat: no-repeat;
     height: 65px;
     padding-top: 12px;
