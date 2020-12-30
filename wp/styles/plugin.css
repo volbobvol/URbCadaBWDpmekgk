@@ -108,6 +108,14 @@
   display: table;
   margin-bottom: 10px;
 }
+#theta_settings .settings-small-button {
+  color: #3e3c3c;
+  cursor: pointer;
+  padding: 4px;
+}
+#theta_settings .settings-small-button:hover {
+  color: #0a0a0a;
+}
 #theta_settings .layout {
   width: 100px;
   height: 100px;
